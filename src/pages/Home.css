@@ -3,30 +3,43 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .home-container {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  color: black; 
-  overflow-x: hidden;
-  background-color: transparent; 
+  color: black;
+  overflow: hidden; /* Prevent any scrollbars from particles */
 }
 
-.particles-container {
+/* Full-screen background layer for particles */
+.particles-background {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 0;
-  overflow: hidden;
+  pointer-events: none; /* Allow clicking through to content */
+}
+
+/* Make sure particles fill their container */
+.particles {
+  width: 100%;
+  height: 100%;
+}
+
+/* Content positioned above particles */
+.content-layer {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%;
 }
 
 main {
-  position: relative;
-  z-index: 10;
   padding: 2rem 1rem;
   width: 100%;
   box-sizing: border-box;
@@ -37,18 +50,17 @@ section {
   margin: 5rem auto;
   padding: 2rem;
   border-radius: 16px;
-  background-color: transparent; 
-  backdrop-filter: none; 
+  background-color: transparent;
 }
 
-/* Updated heading styles to match the image */
+/* Rest of your CSS remains the same */
 h2 {
-  font-size: 5rem; /* Increased from 4rem */
-  font-weight: 900; /* Made slightly bolder */
-  margin-bottom: 0.3rem; /* Reduced spacing between heading and subtitle */
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 0.3rem;
   text-align: left;
   line-height: 1.1;
-  letter-spacing: -0.03em; /* Slightly tighter letter spacing */
+  letter-spacing: -0.03em;
   position: relative;
   display: flex;
   align-items: center;
@@ -58,8 +70,6 @@ h2::after {
   content: none;
 }
 
-
-/* Subtitle style for text below main heading */
 p {
   font-size: 2.8rem;
   margin-top: 0;
