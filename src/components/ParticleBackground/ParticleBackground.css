@@ -1,0 +1,10 @@
+/* src/components/ParticleBackground/ParticleBackground.css */
+.particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: white; /* White background instead of dark */
+    width: 100%;
+    height: 100%;
+  }

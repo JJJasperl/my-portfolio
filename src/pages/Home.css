@@ -1,0 +1,133 @@
+/* src/pages/Home.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  color: black; 
+  overflow-x: hidden;
+  background-color: transparent; 
+}
+
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 10;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: transparent; 
+  backdrop-filter: none; 
+}
+
+/* Updated heading styles to match the image */
+h2 {
+  font-size: 5rem; /* Increased from 4rem */
+  font-weight: 900; /* Made slightly bolder */
+  margin-bottom: 0.3rem; /* Reduced spacing between heading and subtitle */
+  text-align: left;
+  line-height: 1.1;
+  letter-spacing: -0.03em; /* Slightly tighter letter spacing */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+h2::after {
+  content: none;
+}
+
+
+/* Subtitle style for text below main heading */
+p {
+  font-size: 2.8rem;
+  margin-top: 0;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  text-align: left;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.9); /* Changed to match dark theme */
+}
+
+.cta-section {
+  text-align: center;
+}
+
+.cta-section p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8); /* Changed to match dark theme */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.1); /* Changed to match dark theme */
+  border-radius: 8px;
+  text-decoration: none;
+  color: black; /* Changed to match dark theme */
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Changed to match dark theme */
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3.2rem;
+  }
+  
+  h2 + p {
+    font-size: 2rem;
+  }
+  
+  .wave-emoji {
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+}

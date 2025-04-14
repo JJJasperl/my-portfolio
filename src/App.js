@@ -1,11 +1,11 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-
-// Import your pages
-import Home from './pages/Home/Home';
-// import Projects from './pages/Projects/Projects';
-// import Gallery from './pages/Gallery/Gallery';
+import Home from './pages/Home';  // Updated path
+import Projects from './pages/Projects';  // Updated path
+import Gallery from './pages/Gallery';  // Updated path
+import './App.css';
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/projects" element={<Projects />} />
-          <Route path="/gallery" element={<Gallery />} /> */}
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </AnimatePresence>
     </Router>
