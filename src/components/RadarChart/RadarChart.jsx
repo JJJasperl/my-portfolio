@@ -16,8 +16,8 @@ const RadarChart = ({ data }) => {
   const radius = 130;
   const viewBoxSize = 250;
   
-  // Label distance - reduced to bring labels closer to chart
-  const labelDistance = 15; // Reduced from 20 to 10
+  // Label distance
+  const labelDistance = 15;
   
   // Calculate tooltip width based on active genre
   useEffect(() => {

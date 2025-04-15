@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Particles } from "../components/magicui/particles";
 import { BlurFade } from "../components/magicui/blur-fade";
 import RadarChart from "../components/RadarChart/RadarChart";
+import TimeVisualization from "../components/TimeVisualization/TimeVisualization";
 import "./Home.css";
 
 const Home = () => {
@@ -49,6 +50,12 @@ const Home = () => {
               <p>Nice to meet you</p>
             </BlurFade>
           </section>
+
+    {/* Time Visualization Section */}
+    <section id="time" className="time-section">
+      <TimeVisualization />
+    </section>
+    
  {/* Statistics Section */}
 <section id="statistics" className="statistics-section">
   {/* Title Block */}
