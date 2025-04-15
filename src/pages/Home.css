@@ -141,3 +141,128 @@ h3 {
     padding: 1.5rem;
   }
 }
+
+/* Statistics Section Styles */
+.statistics-section {
+  position: relative;
+  margin: 6rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+/* Title Block */
+.statistics-title-block {
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(to right, #1e293b, #334155);
+  color: #fb923c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Content Container */
+.statistics-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Content Blocks */
+.statistics-content-block {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.statistics-content-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.block-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.block-description {
+  margin-bottom: 2rem;
+  color: #64748b;
+  font-size: 1.125rem;
+}
+
+/* Chart Container */
+.chart-container {
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(249, 250, 251, 0.5); */
+  border-radius: 0.75rem;
+  padding: 2rem; /* Increased padding */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative; /* Important for tooltip positioning */
+}
+
+/* Media Queries */
+@media (min-width: 1024px) {
+  .statistics-section {
+    margin: 13rem auto;
+  }
+  
+  .statistics-content-container {
+    flex-direction: row;
+  }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .statistics-title-block {
+    background: linear-gradient(to right, #334155, #475569);
+  }
+  
+  .statistics-content-block {
+    background-color: rgba(30, 41, 59, 0.9);
+  }
+  
+  .statistics-content-block::before {
+    background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.2), rgba(15, 23, 42, 0.1));
+  }
+  
+  .block-title {
+    color: #f1f5f9;
+  }
+  
+  .block-description {
+    color: #cbd5e1;
+  }
+  
+  .chart-container {
+    background-color: rgba(51, 65, 85, 0.3);
+  }
+}
